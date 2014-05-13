@@ -1,25 +1,8 @@
 	//module
 	var demoApp = angular.module('demoApp',[]);
 	
-/*//controller
-	demoApp.controller('SimpleController',function($scope){
-		$scope.customers = [{
-			name:'sidharth',
-			city : 'delhi',
-			state : 'delhi'
-		},
-		{
-			name:'karan',
-			city : 'hisar',
-			state : 'har'
-		}]
-	});
-
-
-*/
-	
-
-demoApp.controller('SimpleController',function ($scope){
+	var controller = {};
+	controller.SimpleController = function ($scope){
 	$scope.people = [
 						{
 							name:'sidharth',
@@ -37,4 +20,6 @@ demoApp.controller('SimpleController',function ($scope){
 							state : 'haryana'
 						}
 					  ];
-		});
+			}		  
+
+demoApp.controller(controller);
