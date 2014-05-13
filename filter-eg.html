@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+	    
+	    <title>Learning AngularJS</title>
+	</head>
+	<body ng-init = "customer = [{name:'sidharth',city:'Chandigarh'},{name:'raghu',city:'Rohtak'},{name:'karan',city:'Hisar'}]">
+
+		<label>Name : </label>
+		<input type="text" ng-model="name" /> {{name}}
+		<ul>
+			<li ng-repeat="cust in customer | filter:name | orderBy : 'city'">{{cust.name | uppercase}} - {{cust.city|lowercase}}</li>
+		</ul>
+		<script  src="script/angular.min.js"></script>
+	</body>
+</html>
