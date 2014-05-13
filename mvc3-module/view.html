@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    
+	    <title>Learning AngularJS</title>
+	</head>
+	<body ng-app="demoApp">
+		<div class="wrapper" ng-controller="SimpleController">
+			<ul>
+				<li ng-repeat="cust in people">
+					my name is {{cust.name}} and i am from {{cust.city}} , {{cust.state}}
+				</li>
+			</ul>
+		<script  src="../script/angular.min.js"></script>
+		<script  src="controller.js"></script>
+	</body>
+</html>
