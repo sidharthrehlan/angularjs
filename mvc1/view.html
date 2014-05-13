@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+	    
+	    <title>Learning AngularJS</title>
+	</head>
+	<body>
+		<div ng-controller="SimpleController">
+			<h3>View list of people</h3>
+			<label> Search :</label>
+			<input type="text" ng-model="search">
+			<ul>
+				<li ng-repeat="person in people | filter : search | orderBy : 'state'">{{person.name | uppercase}} is from {{person.city|lowercase}}, {{person.state}}  </li>
+			</ul>
+
+			<h3>Add People</h3>
+			<label>Enter Person's Name  : </label>
+			<input type="text" ng-model="person_name" />{{person_name}}
+			<br />
+			<label>Enter Person's City  : </label>
+			<input type="text" ng-model="person_city" /> {{person_city}}
+			<br />
+			<label>Enter Person's State  : </label>
+			<input type="text" ng-model="person_state" /> {{person_state}}
+			<br />
+
+			<button ng-click="addPerson()"> Add the person!</button>
+		</div>
+		<script  src="../script/angular.min.js"></script>
+		<script  src="controller.js"></script>
+	</body>
+</html>
