@@ -17,7 +17,9 @@
 
 
 */
-	function SimpleController($scope){
+	
+
+demoApp.controller('SimpleController',function ($scope){
 	$scope.people = [
 						{
 							name:'sidharth',
@@ -35,6 +37,4 @@
 							state : 'haryana'
 						}
 					  ];
-		}
-
-		demoApp.controller('SimpleController',SimpleController);
+		});
